@@ -1,4 +1,4 @@
-package com.javamonster.internetstore.service;
+package com.javamonster.internetstore.service.impl;
 
 import com.javamonster.internetstore.entity.Role;
 import com.javamonster.internetstore.entity.User;

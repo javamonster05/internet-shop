@@ -1,8 +1,9 @@
-package com.javamonster.internetstore.service;
+package com.javamonster.internetstore.service.impl;
 
 import com.javamonster.internetstore.entity.User;
 import com.javamonster.internetstore.repository.RoleRepository;
 import com.javamonster.internetstore.repository.UserRepository;
+import com.javamonster.internetstore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

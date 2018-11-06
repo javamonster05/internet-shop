@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.jws.WebParam;
+
 @Controller
 public class UserController {
 
@@ -23,6 +25,11 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(Model model){
+        return "home";
+    }
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -42,7 +49,7 @@ public class UserController {
 
         securityService.autologin(userForm.getUsername(), userForm.getPassword());
 
-        return "redirect:/welcome";
+        return "redirect:/home";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -53,12 +60,9 @@ public class UserController {
         if (logout != null)
             model.addAttribute("message", "You have been logged out successfully.");
 
-        return "login";
+        return "home";
     }
 
-    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
-        return "welcome";
-    }
+
 
 }
