@@ -1,25 +1,25 @@
-INSERT INTO USER (user_id, user_name, user_password)
-VALUES (1, 'ivan', 'ivan123');
-
-INSERT INTO USER (user_id, user_name, user_password)
-VALUES (2, 'dima', 'dima123');
-
-INSERT INTO USER (user_id, user_name, user_password)
-VALUES (3, 'yura', 'yura123');
+-- INSERT INTO USER (user_id, user_name, user_password)
+-- VALUES (1, 'ivan', 'ivan123');
+--
+-- INSERT INTO USER (user_id, user_name, user_password)
+-- VALUES (2, 'dima', 'dima123');
+--
+-- INSERT INTO USER (user_id, user_name, user_password)
+-- VALUES (3, 'yura', 'yura123');
 
 INSERT INTO ROLE (role_id, role_name)
 VALUES (1, 'ROLE_ADMIN');
 INSERT INTO ROLE (role_id, role_name)
 VALUES (2, 'ROLE_USER');
 
-INSERT INTO USER_ROLE (user_id, role_id)
-VALUES (1, 1);
-INSERT INTO USER_ROLE (user_id, role_id)
-VALUES (1, 2);
-INSERT INTO USER_ROLE (user_id, role_id)
-VALUES (2, 2);
-INSERT INTO USER_ROLE (user_id, role_id)
-VALUES (3, 2);
+-- INSERT INTO USER_ROLE (user_id, role_id)
+-- VALUES (1, 1);
+-- INSERT INTO USER_ROLE (user_id, role_id)
+-- VALUES (1, 2);
+-- INSERT INTO USER_ROLE (user_id, role_id)
+-- VALUES (2, 2);
+-- INSERT INTO USER_ROLE (user_id, role_id)
+-- VALUES (3, 2);
 
 -- INSERT INTO PRODUCT (name, description, quantity, price)
 -- VALUES ('Soap', 'Pears baby soap for Kids', 1, 35.75);

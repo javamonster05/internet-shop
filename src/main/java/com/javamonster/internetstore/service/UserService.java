@@ -2,8 +2,10 @@ package com.javamonster.internetstore.service;
 
 import com.javamonster.internetstore.entity.User;
 
-public interface UserService {
-    void save(User user);
+import java.util.Optional;
 
-    User findByUsername(String username);
+public interface UserService {
+    void saveUser(User user);
+
+    Optional<User> findByUsername(String username);
 }

@@ -1,6 +1,7 @@
 package com.javamonster.internetstore.entity;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -13,10 +14,10 @@ public class Role {
     private Long id;
 
     @Column(name = "role_name", unique = true)
-    private String name;
+    private String role;
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "roles")
+    private Collection<User> users;
 
     public Long getId() {
         return id;
@@ -26,19 +27,19 @@ public class Role {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getRole() {
+        return role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public Set<User> getUsers() {
+    public Collection<User> getUsers() {
         return users;
     }
 
-    public void setUsers(Set<User> users) {
+    public void setUsers(Collection<User> users) {
         this.users = users;
     }
 }
